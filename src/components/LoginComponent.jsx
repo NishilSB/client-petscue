@@ -10,6 +10,10 @@ function LoginComponent() {
 
   const navigate = useNavigate();
 
+  const userLoginCheck = localStorage.getItem('user')
+
+  console.log(userLoginCheck);
+
   const submitHandle = async () => {
     try {
       if (email.trim().length == 0 || password.trim().length == 0) {
@@ -21,12 +25,15 @@ function LoginComponent() {
         const { data } = await axiosInstance.post("/user/login", { email });
         console.log(data);
         if (data) {
+          const token = data.token
+          console.log(data.token);
           if (data.result.password === password) {
             toast.success(data.success, {
               position: "top-right",
               autoClose: 3000,
             });
             setTimeout(() => {
+              localStorage.setItem('user',JSON.stringify({data,token}))
               navigate("/");
             }, 2000);
           } else {
