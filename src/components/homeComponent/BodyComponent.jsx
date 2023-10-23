@@ -1,5 +1,10 @@
+import { useNavigate } from "react-router-dom";
+
+
+
 
 const BodyComponent = () => {
+  const navigate=useNavigate()
   return (
     <>
       <div style={{ position: "relative" }}>
@@ -18,13 +23,29 @@ const BodyComponent = () => {
 
         </p>
 
-        <button className="bg-red-900 hover:bg-red-950 text-white font-bold py-4 px-8 border border-red-950 rounded-3xl " style={{
+        <button onClick={()=>navigate('/rescue')} className="bg-red-900 hover:bg-red-950 text-white font-bold py-4 px-8 border border-red-950 rounded-3xl " style={{
             position: "absolute",
             top: 400,
             left: 200, // Change left to right
             height: "auto",
           }}>
-          Adopt a pet
+          Rescue
+        </button>
+        <button className="bg-red-900 hover:bg-red-950 text-white font-bold py-4 px-8 border border-red-950 rounded-3xl " style={{
+            position: "absolute",
+            top: 400,
+            left: 330, // Change left to right
+            height: "auto",
+          }}>
+          Adopt
+        </button>
+        <button className="bg-red-900 hover:bg-red-950 text-white font-bold py-4 px-8 border border-red-950 rounded-3xl " style={{
+            position: "absolute",
+            top: 400,
+            left: 460, // Change left to right
+            height: "auto",
+          }}>
+          Training
         </button>
 
         <img

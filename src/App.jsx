@@ -3,7 +3,7 @@ import Home from "./pages/homePage/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ProfilePage from "./pages/userPage/ProfilePage";
-import RescueAdoptPage from "./pages/userPage/RescueAdoptPage";
+import RescuePage from "./pages/userPage/RescuePage";
 
 const App = () => {
   return (
@@ -14,7 +14,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} /> 
           <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/rescue" element={<RescueAdoptPage />} />
+          <Route path="/rescue" element={<RescuePage />} />
         </Routes>
       </Router>
     </div>

@@ -28,6 +28,7 @@ function RegisterComponent() {
       console.log(error);
     }
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -87,6 +88,9 @@ function RegisterComponent() {
       }
     }
   };
+
+
+  
   const findOTP = async () => {
     console.log(email, otp, "fdddddddddddddddddd");
     const { data } = await axiosInstance.post("/user/getOtp", {email,otp});

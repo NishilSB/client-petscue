@@ -10,6 +10,7 @@ const ProfileComponent = () => {
   const { data } = JSON.parse(localStorage.getItem("user"));
   console.log(data.result.email);
   const email = data.result.email;
+
   const userDetails = async () => {
     const userData = await axiosInstance.post("/user/login", { email });
 
@@ -74,25 +75,22 @@ const ProfileComponent = () => {
 
   return (
     <>
-      <div
-        className="relative flex  w-full h-screen"
-        style={{
-          backgroundImage: `url("/public/images/vector 2.png")`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
+      <div className="relative flex  w-full h-screen" style={{backgroundImage: `url("/public/images/vector 2.png")`,backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
         }}
       >
         <div className=" w-full h-full flex justify-center items-center ">
           <div>
-            <p className="font-semibold text-lg">Name: {Details.name}</p>
+            <p className="font-semibold text-lg text-red-900">Name: {Details.name}</p>
             <br />
-            <p className="font-semibold text-lg">
+            <p className="font-semibold text-lg text-red-900">
               Phone Number: {Details.phone}
             </p>
             <br />
-            <p className="font-semibold text-lg">Email: {Details.email}</p>
+            <p className="font-semibold text-lg text-red-900">Email: {Details.email}</p>
           </div>
         </div>
+
         <div className=" w-full h-full justify-center items-center  flex">
           <div className="flex-col">
             {image ? (
