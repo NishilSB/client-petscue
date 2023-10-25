@@ -17,7 +17,7 @@ const NavbarComponent = () => {
         <div className="navbar-start  w-full">
           <div className="dropdown"></div>
 
-          <img className="mask mask-square h-20" src="images/logo1.png" />
+          <img className="mask mask-square h-20 " src="images/logo1.png" />
         </div>
 
         <div className="navbar-center  flex justify-center items-center  lg:flex w-full">

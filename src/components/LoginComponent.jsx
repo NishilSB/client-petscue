@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import axiosInstance from "../api/axios";
+// import axiosInstance, { api } from "../api/axios";
 import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
 
@@ -22,7 +22,7 @@ function LoginComponent() {
           autoClose: 1000,
         });
       } else {
-        const { data } = await axiosInstance.post("/user/login", { email });
+        const { data } = await api.post("/user/login", { email });
         console.log(data);
         if (data) {
           const token = data.token

@@ -53,26 +53,7 @@ const Navbar = () => {
             </details>
           </div>
 
-          {/* <div className="w-full ">
-            <p tabIndex={0}>
-              <details className="dropdown">
-                <summary className="m-1 btn bg-white">Services</summary>
-                <ul className="p-2 shadow  menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                  <li>
-                    <button onClick={() => navigate("/login")}>Rescue</button>
-                  </li>
-
-                  <li>
-                    <button onClick={() => navigate("/adopt")}>Rescue</button>
-                  </li>
-
-                  <li>
-                    <button onClick={() => navigate("/login")}>Training</button>
-                  </li>
-                </ul>
-              </details>
-            </p>
-          </div> */}
+          
           <div className="w-full ">
             <p>
               <a className="m-1 btn bg-white">Contact</a>
