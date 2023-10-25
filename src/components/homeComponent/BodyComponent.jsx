@@ -65,7 +65,7 @@ const BodyComponent = () => {
                 onClick={() => navigate("/rescue")}
                 className="bg-red-900 hover:bg-red-950 text-white font-bold lg:w-32 md:w-28 sm:w-18 h-14 border border-red-950 rounded-3xl   "
               >
-                Adopt
+                Rescue
               </button>
             </div>
             <div className="bg-gray-100 w-full  h-16">
@@ -75,7 +75,7 @@ const BodyComponent = () => {
             </div>
             <div className="bg-gray-800 w-full  h-16">
               <button className="bg-red-900 hover:bg-red-950 text-white font-bold lg:w-32 md:w-24 sm:w-18 h-14 border border-red-950 rounded-3xl   ">
-                Adopt
+                Training
               </button>
             </div>
           </div>

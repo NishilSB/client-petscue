@@ -1,5 +1,6 @@
 import { useState } from "react";
-import axiosInstance from "../api/axios";
+import  { api } from "../api/axios";
+// import axiosInstance from "../api/axios";
 import { useNavigate, Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 
@@ -23,7 +24,7 @@ function RegisterComponent() {
 
   const handleUserOtp = async () => {
     try {
-      await axiosInstance.post("/user/createOtp", { email });
+      await api.post("/user/createOtp", { email });
     } catch (error) {
       console.log(error);
     }
@@ -70,7 +71,7 @@ function RegisterComponent() {
     } else {
       try {
         setModalOpen(true);
-        const { data } = await axiosInstance.post("/user/signup", {
+        const { data } = await api.post("/user/signup", {
           name,
           email,
           phone,
@@ -93,7 +94,7 @@ function RegisterComponent() {
   
   const findOTP = async () => {
     console.log(email, otp, "fdddddddddddddddddd");
-    const { data } = await axiosInstance.post("/user/getOtp", {email,otp});
+    const { data } = await api.post("/user/getOtp", {email,otp});
     console.log(data);
 
     const userOtp = data.otpMatch.OTP;
@@ -117,10 +118,6 @@ function RegisterComponent() {
       
     }
   };
-  // const handleModalOpen = ()=>{
-  //   setModalOpen(true)
-  // }
-
   return (
     <>
       <div>

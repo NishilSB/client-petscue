@@ -1,14 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 // import axiosInstance, { api } from "../api/axios";
 import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
+import { api } from "../api/axios";
 
 function LoginComponent() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
+
+  useEffect(()=>{
+    const user=localStorage.getItem('user')
+
+    if(user){
+      navigate('/')
+    }
+    
+
+  },[])
 
   const userLoginCheck = localStorage.getItem('user')
 
