@@ -4,8 +4,8 @@ const BodyComponent = () => {
   const navigate = useNavigate();
   return (
     <>
-      {/* <div
-        className="flex flex-col-reverse  lg:w-full h-screen md:1/2 sm:w-1/4  lg:flex-row md:flex-col sm:flex-col-reverse bg-green-400 "
+      <div
+        className="flex flex-col-reverse  lg:w-full h-screen md:1/2 sm:w-1/4  lg:flex-row md:flex-col sm:flex-col-reverse "
         style={{
           backgroundImage: `url("/public/images/vector 2.png")`,
           backgroundSize: "cover",
@@ -13,7 +13,7 @@ const BodyComponent = () => {
         }}
       >
         <div className="flex md:w-1/2 flex-col  lg:w-full sm:w-full items-center  justify-center">
-          <div className=" lg:w-9/12 md:w-screen bg-red-400 sm:w-screen ">
+          <div className=" lg:w-9/12 md:w-screen sm:w-screen ">
             <div>
             <h1 className="text-4xl">Say Hi to Petscue</h1>
             <p className=" lg:text-6xl sm:text-2xl ">
@@ -42,8 +42,8 @@ const BodyComponent = () => {
         <div className=" md:w-1/2 lg:w-full sm:1/4 flex items-center justify-center">
           <img src="/public/images/main.png" alt="" />
         </div>
-      </div> */}
-      <div className="bg-red-400 w-screen h-screen lg:flex  ">
+      </div>
+      {/* <div className="bg-red-400 w-screen h-screen lg:flex  ">
         <div className="bg-yellow-200 flex lg:w-full md:w-1/2 h-screen  flex-col items-center justify-center">
           <div className="bg-red-400 w-[60%] h-36 flex  ">
             <div>
@@ -85,7 +85,7 @@ const BodyComponent = () => {
 
 
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

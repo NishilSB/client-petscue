@@ -15,9 +15,8 @@ const NavbarComponent = () => {
     <>
       <div className="flex navbar bg-base-100 shadow-xl    top-0 left-0 w-full z-50">
         <div className="navbar-start  w-full">
-          <div className="dropdown"></div>
 
-          <img className="mask mask-square h-20 " src="images/logo1.png" />
+          <img className="mask mask-square h-20 " src="/images/logo1.png" alt="kkkkkkkkkkkk"  />
         </div>
 
         <div className="navbar-center  flex justify-center items-center  lg:flex w-full">

@@ -133,9 +133,7 @@ function RegisterComponent() {
           <ToastContainer />
           <div className=" flex flex-col items-center justify-center ">
             <div className="flex items-start justify-center ">
-              <h1 className="text-black text-3xl font-semibold">
-                Create Your Account
-              </h1>
+             
             </div>
 
             <form
@@ -252,6 +250,18 @@ function RegisterComponent() {
           </div>
         </div>
       </div>
+
+      {/* <div className="bg-red-400 w-screen h-screen flex ">
+        <div className=" bg-slate-500 w-full h-full">
+
+
+
+
+          
+        </div>
+        <div className=" bg-yellow-600 w-full h-full"></div>
+
+      </div> */}
     </>
   );
 }

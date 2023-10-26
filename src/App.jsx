@@ -4,6 +4,12 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ProfilePage from "./pages/userPage/ProfilePage";
 import RescuePage from "./pages/userPage/RescuePage";
+import ExpertSignupPage from "./pages/expertPage/ExpertSignupPage";
+import ExpertHomePage from "./pages/expertPage/ExpertHomePage";
+import AdminLoginPage from "./pages/adminPage/AdminLoginPage";
+
+
+
 
 const App = () => {
   return (
@@ -15,6 +21,19 @@ const App = () => {
           <Route path="/register" element={<Register />} /> 
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/rescue" element={<RescuePage />} />
+
+          <Route path="/expert" element={<ExpertSignupPage/>} />
+          <Route path="/expert/home" element={<ExpertHomePage/>} />
+
+          <Route path="/admin" element={<AdminLoginPage/>} />
+          {/* <Route path="/admin/home" element={<AdminHomePage/>} /> */}
+
+
+
+
+
+
+
         </Routes>
       </Router>
     </div>
