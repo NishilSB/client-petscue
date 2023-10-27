@@ -7,7 +7,7 @@ import RescuePage from "./pages/userPage/RescuePage";
 import ExpertSignupPage from "./pages/expertPage/ExpertSignupPage";
 import ExpertHomePage from "./pages/expertPage/ExpertHomePage";
 import AdminLoginPage from "./pages/adminPage/AdminLoginPage";
-
+import AdminHomePage from "./pages/adminPage/AdminHomePage"
 
 
 
@@ -26,7 +26,7 @@ const App = () => {
           <Route path="/expert/home" element={<ExpertHomePage/>} />
 
           <Route path="/admin" element={<AdminLoginPage/>} />
-          {/* <Route path="/admin/home" element={<AdminHomePage/>} /> */}
+          <Route path="/admin/home" element={<AdminHomePage/>} />
 
 
 

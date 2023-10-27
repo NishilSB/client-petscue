@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { api } from "../../api/axios";
 import { ToastContainer, toast } from "react-toastify";
 
@@ -14,20 +15,24 @@ const ExpertSignupComponent = () => {
   // const [modalOpen, setModalOpen] = useState(false);
   // const [err,setErr] = useState("")
 
+  const navigate=useNavigate()
+
+
+
   const regex_password = /^(?=.*?[A-Z])(?=.*[a-z])(?=.*[0-9]){8,16}/;
   const regex_mobile = /^\d{10}$/;
   const regex_email = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 
 
-  const handleExpertOtp=async()=>{
-    try {
-      await api.post('/expert/expertOtp',{email})
+  // const handleExpertOtp=async()=>{
+  //   try {
+  //     await api.post('/expert/expertOtp',{email})
       
-    } catch (error) {
-      console.log(error);
+  //   } catch (error) {
+  //     console.log(error);
       
-    }
-  }
+  //   }
+  // }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -75,8 +80,10 @@ const ExpertSignupComponent = () => {
         console.log(expertData);
 
         if (expertData) {
+          navigate('/expert/home')
 
-          handleExpertOtp()
+
+          // handleExpertOtp()
 
           console.log(expertData.message);
         }

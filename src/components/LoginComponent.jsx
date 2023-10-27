@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 // import axiosInstance, { api } from "../api/axios";
 import "react-toastify/dist/ReactToastify.css";
-import { toast, ToastContainer } from "react-toastify";
+import { toast ,ToastContainer} from 'react-toastify';
+
 import { api } from "../api/axios";
 
 function LoginComponent() {
@@ -31,11 +32,15 @@ function LoginComponent() {
           autoClose: 1000,
         });
       } else {
+
         const { data } = await api.post("/user/login", { email });
         console.log(data);
+
         if (data) {
+
           const token = data.token;
           console.log(data.token);
+
           if (data.result.password === password) {
             toast.success(data.success, {
               position: "top-right",
@@ -59,7 +64,7 @@ function LoginComponent() {
   };
   return (
     <>
-      {/* <div className="h-screen " style={{
+       {/* <div className="h-screen " style={{
           backgroundImage: 'url("images/expert 1.jpg")',
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
@@ -130,9 +135,9 @@ function LoginComponent() {
             </div>
           </form>
         </div>
-      </div> */}
+      </div>  */}
 
-      <div
+       <div
         className="bg-gray-600 w-screen h-screen flex sm:w-full md:w-full lg:w-full"
         style={{
           backgroundImage: 'url("images/loginbg.jpg")',
@@ -202,7 +207,7 @@ function LoginComponent() {
             </form>
           </div>
         </div>
-      </div>
+      </div> 
     </>
   );
 }

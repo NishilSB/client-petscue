@@ -93,6 +93,7 @@ function RegisterComponent() {
 
   
   const findOTP = async () => {
+    
     console.log(email, otp, "fdddddddddddddddddd");
     const { data } = await api.post("/user/getOtp", {email,otp});
     console.log(data);

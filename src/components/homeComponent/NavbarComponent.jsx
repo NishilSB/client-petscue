@@ -20,6 +20,7 @@ const NavbarComponent = () => {
         </div>
 
         <div className="navbar-center  flex justify-center items-center  lg:flex w-full">
+         
           <div className="w-full ">
             <p>
               <a className="btn m-1 bg-white ">About Us</a>
@@ -66,6 +67,7 @@ const NavbarComponent = () => {
               <a className="m-1 btn bg-white">Contact</a>
             </p>
           </div>
+
         </div>
         <div className="navbar-end flex justify-end items-center  w-full ">
           <div className="">

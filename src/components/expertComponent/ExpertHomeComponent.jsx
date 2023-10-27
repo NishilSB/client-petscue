@@ -1,3 +1,5 @@
+import { toast,ToastContainer } from 'react-toastify';
+// import Lottie from 'lottie-react';
 
 const ExpertHomeComponent = () => {
 
@@ -11,27 +13,27 @@ const ExpertHomeComponent = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-       
+       <ToastContainer/>
+
         {/* kkkkkkkkkkkkkkkkkkkkkkkkkkkk */}
 
-        <div className="relative flex flex-col text-gray-700 bg-white shadow-md w-full h-96 rounded-xl bg-clip-border justify-center items-center ml-6">
+        <div className="relative flex flex-col text-gray-700 bg-amber-50 shadow-2xl w-full h-96 rounded-xl bg-clip-border justify-center items-center ml-6">
           <div className="">
-            {/* <img
-              src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"
-              alt="img-blur-shadow"
-              layout="fill"
-            /> */}
+           
           </div>
           <div className="p-6">
-            <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+            <h5 className="block mb-2 font-sans text-3xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
               Who is expert ?
             </h5>
-            <p className="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
-              click the button for admin verification kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+            <p className="block font-sans text-base antialiased font-light leading-relaxed text-lg text-inherit">
+              Expert is a pet trainer avilable,who provides better training for rescued pets.But for every signup trainer should wait for admin verification.Only verified trainer can upload training videos and have permisiion for chat with the client.So wait for admin verification.Click the blow button to admin verification
             </p>
           </div>
           <div className="p-6 pt-0">
-          <button
+          <button onClick={()=>{ 
+            toast.success("Wait for admin verification", 
+            { position: "top-right",autoClose:1000,})
+          }}
                 className="bg-red-900 hover:bg-red-950 text-white font-bold py-4 px-8 border border-red-950 rounded-3xl mt-6  "
               >
                 Click
